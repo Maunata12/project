@@ -64,9 +64,15 @@ const Navbar = () => {
 
         {/* Navbar Menu */}
         <ul className="flex space-x-6 items-center">
-          <li className="navbar-item">
+          <li className="navbar-item flex items-center gap-4">
             <Link href="/medical" className="text-white hover:text-gray-400">
               Medical intake
+            </Link>
+            <Link href="/counting" className="text-white hover:text-gray-400">
+             Calorie Counting
+            </Link>
+            <Link href="/fitness" className="text-white hover:text-gray-400">
+              Fitness Tracker
             </Link>
           </li>
           {/* Additional menu items can be added here */}
