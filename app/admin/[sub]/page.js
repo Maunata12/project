@@ -1,10 +1,15 @@
 import React from "react";
+import Check from "./checking";
 
-import UserDetail from "@/app/components/User";
-
-async function page({ params }) {
+async function Page({ params }) {
   const { sub } = params;
-  return <div className="p-5 w-full">{sub === "users" && <UserDetail />}</div>;
+  const optionList = ["room", "users"];
+
+  if (!optionList.includes(sub)) {
+    return <h1>404 - Not Found</h1>;
+  }
+
+  return <Check sub={sub} />;
 }
 
-export default page;
+export default Page;
