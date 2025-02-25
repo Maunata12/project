@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 
 const HealthBuddy = () => {
-  const { data: session } = useSession(); // Get session data to check if the user is logged in
+  const { data: session } = useSession();
 
   return (
     <div className="flex bg-gray-200 min-h-screen">
@@ -18,9 +18,8 @@ const HealthBuddy = () => {
             all in one app!
           </p>
 
-          {/* Conditionally render Register Now button based on session */}
           {!session && (
-            <Link href="/register">
+            <Link href="/login">
               <button className="bg-gray-600 text-white rounded-md px-4 py-2 mt-3">
                 Register Now
               </button>
@@ -29,7 +28,6 @@ const HealthBuddy = () => {
         </div>
       </div>
 
-      {/* Right Section (Image) */}
       <div className="flex-none w-1/2 p-10">
         <img
           src="https://health-e.in/wp-content/uploads/2023/12/healthcare-concept-with-futuristic-design-graphics-medical-treatment-icons.webp"
